@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "employeedb-e971d": {
+      "hosting": {
+        "CRUDFirebase": [
+          "employeedb-e971d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "employeedb-e971d"
+  }
+}

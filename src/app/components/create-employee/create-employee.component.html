@@ -1,0 +1,39 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>{{title}} <div class="spinner-border float-right" *ngIf="loading" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </h3>
+                    <span class="badge badge-danger" *ngIf="stateEmployeeForms">TODOS LOS CAMPOS DEBEN SER
+                        OBLIGATORIOS</span>
+                    <form class="mt-4" [formGroup]="createEmployee" (ngSubmit)="mAOEEmployee()">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control form-control-lg" formControlName="name"
+                                    placeholder="Nombre">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control form-control-lg" formControlName="surname"
+                                    placeholder="Apellido">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control form-control-lg mt-3" formControlName="position"
+                            placeholder="Puesto">
+                        <input type="number" class="form-control form-control-lg mt-3" formControlName="salary"
+                            placeholder="Salario">
+                        <div class="mt-3">
+                            <button class="btn btn-outline-danger btn-lg mr-3" routerLink="/list-employee"
+                                data-toggle="tooltip" data-placement="top" title="Cancelar"><i
+                                    class="fas fa-times"></i></button>
+                            <button class="btn btn-outline-success btn-lg" data-toggle="tooltip" data-placement="top"
+                                title="Agregar"><i class="fas fa-user-plus"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
